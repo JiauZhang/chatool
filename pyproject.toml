@@ -1,10 +1,6 @@
 [build-system]
-requires = [
-    "build",
-    "setuptools >= 42",
-    "wheel",
-]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
 
 [project]
 name = "chatool"
@@ -15,34 +11,31 @@ authors = [
     {name = "Jiau Zhang", email = "jiauzhang@163.com"},
 ]
 classifiers = [
-    'Intended Audience :: Developers',
     'Topic :: Scientific/Engineering :: Artificial Intelligence',
-    'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
-    'Programming Language :: Python :: 3.8',
 ]
 keywords = [
-    'Deep Learning',
     'Artificial Intelligence',
 ]
-requires-python = ">= 3.8"
+requires-python = ">=3.10"
 dependencies = [
-    'chatchat >= 0.2.1',
-    'conippets >= 0.1.1',
-    'gradio >= 5.1.0',
+    'chatchat>=0.2.7',
+    'conippets>=0.1.8',
+    'gradio>=5.1.0',
 ]
 
 [project.urls]
 Homepage = "https://github.com/jiauzhang/chatool"
 
-[tool.setuptools]
-package-dir = {"chatool" = "chatool"}
+[tool.hatch.version]
+path = "chatool/version.py"
 
-[tool.setuptools.dynamic]
-version = {attr = "chatool.__version__"}
+[tool.hatch.build.targets.wheel]
+packages = ["chatool"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3.4"]
 
 [tool.pytest.ini_options]
 minversion = "8.0"
 addopts = "-ra -q"
-testpaths = [
-    "tests",
-]
+testpaths = ["tests"]
