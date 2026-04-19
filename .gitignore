@@ -130,3 +130,7 @@ dmypy.json
 
 # secret data
 app.json
+
+# MacOS
+.DS_Store
+**/.DS_Store
