@@ -88,7 +88,7 @@ Analyze the diff to determine:
 
 - **Type**: What kind of change is this?
 - **Scope**: What area/module is affected?
-- **Description**: One-line summary of what changed (present tense, imperative mood, <72 chars)
+- **Description**: One-line summary of what changed (present tense, imperative mood, <72 chars). Describe the *result* (what was done), not the *process* (how it was done).
 
 ### 4. Execute Commit
 
@@ -114,6 +114,7 @@ EOF
 - Imperative mood: "fix bug" not "fixes bug"
 - Reference issues: `Closes #123`, `Refs #456`
 - Keep description under 72 characters
+- Focus on the *what*, not the *how*: state the change itself, not the steps taken to make it
 
 ## Git Safety Protocol
 
