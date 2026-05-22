@@ -1,8 +1,6 @@
 ---
 name: git-commit
-description: 'Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Use when user asks to commit changes, create a git commit, or mentions "/commit". Supports: (1) Auto-detecting type and scope from changes, (2) Generating conventional commit messages from diff, (3) Interactive commit with optional type/scope/description overrides, (4) Intelligent file staging for logical grouping'
-license: MIT
-allowed-tools: Bash
+description: 'Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Use when user asks to commit changes, create a git commit, or mentions "/git-commit". Supports: (1) Auto-detecting type and scope from changes, (2) Generating conventional commit messages from diff, (3) Interactive commit with optional type/scope/description overrides, (4) Intelligent file staging for logical grouping'
 ---
 
 # Git Commit with Conventional Commits
@@ -15,11 +13,9 @@ Create standardized, semantic git commits using the Conventional Commits specifi
 
 ```
 <type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
 ```
+
+One line only. No body, no footer, no details.
 
 ## Commit Types
 
@@ -88,33 +84,21 @@ Analyze the diff to determine:
 
 - **Type**: What kind of change is this?
 - **Scope**: What area/module is affected?
-- **Description**: One-line summary of what changed (present tense, imperative mood, <72 chars). Describe the *result* (what was done), not the *process* (how it was done).
+- **Description**: One concise sentence describing what changed (present tense, imperative mood, <72 chars). Describe the *result* (what was done), not the *process* (how it was done). No details, no body. Just the essence.
 
 ### 4. Execute Commit
 
 ```bash
-# Single line
 git commit -m "<type>[scope]: <description>"
-
-# Multi-line with body/footer
-git commit -m "$(cat <<'EOF'
-<type>[scope]: <description>
-
-<optional body>
-
-<optional footer>
-EOF
-)"
 ```
 
 ## Best Practices
 
 - One logical change per commit
+- One sentence only — no body, no footer, no details
 - Present tense: "add" not "added"
 - Imperative mood: "fix bug" not "fixes bug"
-- Reference issues: `Closes #123`, `Refs #456`
-- Keep description under 72 characters
-- Focus on the *what*, not the *how*: state the change itself, not the steps taken to make it
+- Keep under 72 characters
 
 ## Git Safety Protocol
 
