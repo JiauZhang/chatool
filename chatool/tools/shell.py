@@ -69,7 +69,7 @@ def _is_dangerous(command: str) -> bool:
                 "description": "Set to true only if the user has explicitly confirmed they want this command to run despite it being flagged as potentially dangerous."
             },
         },
-        "required": ["command"],
+        "required": ["command", "confirmed"],
     },
 )
 def execute_shell_command(command, timeout=30, confirmed=False):
