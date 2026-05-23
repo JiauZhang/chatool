@@ -18,8 +18,8 @@ keywords = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    'chatchat>=0.4.6',
-    'conippets>=0.1.14',
+    'chatchat>=0.4.9',
+    'conippets>=0.1.16',
 ]
 
 [project.scripts]
