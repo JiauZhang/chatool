@@ -1,3 +1,7 @@
+---
+alwaysApply: true
+---
+
 # Agent Rules
 
 ## Don'ts

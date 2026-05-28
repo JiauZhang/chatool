@@ -1,6 +1,6 @@
 ---
 name: git-commit
-description: 'Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Use when user asks to commit changes, create a git commit, or mentions "/git-commit". Supports: (1) Auto-detecting type and scope from changes, (2) Generating conventional commit messages from diff, (3) Interactive commit with optional type/scope/description overrides, (4) Intelligent file staging for logical grouping'
+description: 'Create conventional git commits with automatic type/scope detection from diff, intelligent staging, and interactive message generation. Triggered by "git commit" requests or "/git-commit".'
 ---
 
 # Git Commit with Conventional Commits
