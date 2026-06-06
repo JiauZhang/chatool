@@ -1,18 +1,17 @@
 ---
-alwaysApply: true
-name: "self-evolver-rule"
+name: "skill-evolver"
 description: "Evolves the skill/rule ecosystem by detecting user dissatisfaction signals. Invoke when user clearly dislikes your output approach, style, or decisions."
 ---
 
-# Self Evolver
+# Skill Evolver
 
-A meta-rule that keeps the skill/rule ecosystem healthy by learning from user dissatisfaction.
+A meta-skill that keeps the skill/rule ecosystem healthy by learning from user dissatisfaction.
 
 ## Essence
 
 The core signal is simple: **the user is unhappy with what you just produced or how it approached a task**. This manifests in many forms — explicit rejection, correction, restating requirements differently, or even just a tone of frustration. The exact wording doesn't matter; what matters is recognizing that the output missed the mark.
 
-When that happens, this rule decides whether the ecosystem needs to grow (new skill/rule) or adapt (existing skill/rule improvement).
+When that happens, this skill decides whether the ecosystem needs to grow (new skill/rule) or adapt (existing skill/rule improvement).
 
 ## What to Watch For
 

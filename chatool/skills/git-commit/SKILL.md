@@ -9,6 +9,8 @@ description: 'Create conventional git commits with automatic type/scope detectio
 
 Create standardized, semantic git commits using the Conventional Commits specification. Analyze the actual diff to determine appropriate type, scope, and message.
 
+**The commit message MUST be derived SOLELY from `git diff --staged` / `git diff`.** Do NOT use conversation history or memory of what was discussed. The diff is the ONLY source of truth.
+
 ## Conventional Commit Format
 
 ```
@@ -85,6 +87,8 @@ Analyze the diff to determine:
 - **Type**: What kind of change is this?
 - **Scope**: What area/module is affected?
 - **Description**: One concise sentence describing what changed (present tense, imperative mood, <72 chars). Describe the *result* (what was done), not the *process* (how it was done). No details, no body. Just the essence.
+
+**Validate**: after writing, verify every part of the message corresponds to something visible in the diff. If not, rewrite.
 
 ### 4. Execute Commit
 
